@@ -1,4 +1,4 @@
-#include "Riverbed/river.hpp"
+#include "Riverbed/queue.hpp"
 
 #include <cassert>
 #include <chrono>
@@ -10,7 +10,7 @@
 
 int main() {
   constexpr int N = 1'000'000;
-  Riverbed::RingBuffer<int> rb(1024);
+  Riverbed::SpscQueue<int> rb(1024);
 
   auto start_rb = std::chrono::high_resolution_clock::now();
 
