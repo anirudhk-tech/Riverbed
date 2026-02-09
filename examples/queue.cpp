@@ -94,4 +94,3 @@ int main() {
   std::cout << "Mutex+queue time: " << ns_q << " ns\n";
   std::cout << "Mutex+queue throughput: " << thr_q << " items/sec\n";
 }
-
