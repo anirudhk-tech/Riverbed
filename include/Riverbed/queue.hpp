@@ -28,10 +28,6 @@ class SpscQueue {
     alignas(64) std::atomic<size_t> write, read;
 };
 
-class River {
-  
-};
-
 template <typename T>
 SpscQueue<T>::SpscQueue(size_t capacity) 
   : buffer(static_cast<T*>(std::allocator<T>{}.allocate(capacity))),
